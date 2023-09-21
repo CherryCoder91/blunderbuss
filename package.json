@@ -1,8 +1,15 @@
 {
   "name": "blunderbuss",
-  "displayName": "blunderbuss",
+  "displayName": "Blunderbuss",
   "description": "Scattershot away all those pesky menial dev jobs",
-  "version": "0.0.1",
+  "icon": "resources/app-icons/icon-192.png",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CherryCoder91/blunderbuss"
+  },
+  "homepage": "https://github.com/CherryCoder91/blunderbuss#readme",
+  "publisher": "CherryCoder91",
   "engines": {
     "vscode": "^1.82.0"
   },
