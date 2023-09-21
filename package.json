@@ -1,0 +1,74 @@
+{
+  "name": "blunderbuss",
+  "displayName": "blunderbuss",
+  "description": "Scattershot away all those pesky menial dev jobs",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "blunderbuss.translations.openTranslations",
+        "title": "Open the primary translation file"
+      },
+      {
+        "command": "blunderbuss.translations.addTranslation",
+        "title": "Add a new translated string"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "blunderbuss.translations.addTranslation",
+        "key": "ctrl+shift+l ctrl+shift+l",
+        "mac": "shift+cmd+l shift+cmd+l"
+      },
+      {
+        "command": "blunderbuss.translations.openTranslations",
+        "key": "ctrl+shift+l ctrl+shift+o",
+        "mac": "shift+cmd+l shift+cmd+o"
+      }
+    ],
+    "configuration": {
+      "title": "Blunderbuss",
+      "properties": {
+        "blunderbuss.translationFilePath": {
+          "type": "string",
+          "default": "/translations/locale-en-US.json",
+          "description": "Specifies the file path to the translation json file where key/value pairs will be managed."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "ts-loader": "^9.4.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
