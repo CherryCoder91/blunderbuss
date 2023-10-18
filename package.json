@@ -3,7 +3,7 @@
   "displayName": "Blunderbuss",
   "description": "Scattershot away all those pesky menial dev jobs",
   "icon": "resources/app-icons/icon-192.png",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/CherryCoder91/blunderbuss"

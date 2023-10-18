@@ -24,13 +24,3 @@ Blunderbuss features:
 This extension contributes the following settings:
 
 * `myExtension.translationFilePath`: Path to the translation file within the workspace.
-
-## Known Issues
-
-None.
-
-## Release Notes
-
-### 0.0.0
-
-Initial development started. Development is in progress and there are currently no available releases.
